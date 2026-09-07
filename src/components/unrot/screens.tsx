@@ -55,8 +55,8 @@ export function Onboarding({ onDone }: { onDone: (a: Answers) => void }) {
       </div>
 
       <div key={step} className="animate-rise">
-        <h1 className="text-[28px] font-extrabold leading-tight tracking-tight">{questions[step].q}</h1>
-        <p className="mt-2 text-sm text-muted-foreground">{questions[step].sub}</p>
+        <h1 className="text-[28px] font-extrabold leading-tight tracking-tight">{questions[step]!.q}</h1>
+        <p className="mt-2 text-sm text-muted-foreground">{questions[step]!.sub}</p>
 
         <div className="mt-7 space-y-3">
           {step === 0 &&
@@ -71,7 +71,7 @@ export function Onboarding({ onDone }: { onDone: (a: Answers) => void }) {
             LEVELS.map((l, i) => (
               <Choice
                 key={l}
-                emoji={["🌱", "🌿", "🌳"][i]}
+                emoji={["🌱", "🌿", "🌳"][i]!}
                 label={l}
                 onClick={() => onDone({ role: role!, goal: goal!, level: l as Level })}
               />
