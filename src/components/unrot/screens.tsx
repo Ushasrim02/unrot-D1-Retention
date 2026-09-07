@@ -490,7 +490,7 @@ export function Dashboard({
       </h2>
       <button onClick={onStartLesson} className="tap-card mt-3 block w-full p-5 text-left">
         <span className="text-xs font-bold uppercase tracking-widest text-primary">
-          Day {day + 1} · {nextLesson.minutes} min
+          Day {day} · {nextLesson.minutes} min
         </span>
         <h3 className="mt-1.5 text-[19px] font-extrabold leading-snug">{nextLesson.title}</h3>
         <span className="mt-3 inline-flex rounded-xl surface-hero px-4 py-2 text-sm font-bold text-primary-foreground">
